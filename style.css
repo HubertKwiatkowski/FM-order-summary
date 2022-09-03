@@ -249,6 +249,12 @@ p {
   margin-bottom: .25rem
 }
 
+@media (min-width: 50rem) {
+  .plan-name {
+    margin-bottom: .375rem;
+  }
+}
+
 .change {
   font-size: var(--fs-300);
   font-weight: var(--fw-700);
@@ -290,6 +296,7 @@ p {
 
 @media (min-width: 50rem) {
   .btn-payment {
+    font-size: var(--fs-320);
     margin-bottom: 2rem;
   }
 }
@@ -310,4 +317,10 @@ p {
 
 .cancel a:hover {
   color: var(--clr-neutral-300)
+}
+
+@media (min-width: 50em) {
+  .cancel {
+    font-size: var(--fs-320);
+  }
 }
