@@ -1,6 +1,6 @@
 :root {
   --clr-primary-100: hsl(225, 100%, 94%);
-  --clr-primary-200: hsl(245, 75%, 52%);
+  --clr-primary-200: hsl(245, 75%, 52%, 1);
   --clr-primary-300: hsl(255, 100%, 100%);
   --clr-primary-400: hsla(228, 100%, 99%, 1);
   --clr-primary-500: hsla(245, 83%, 68%, 1);
@@ -232,7 +232,6 @@ p {
 }
 
 .plan {
-  font-size: var(--fs-320);
   line-height: 1.1875rem;
   margin-inline: 1.25rem 3.125rem;
   margin-block: auto;
@@ -296,7 +295,6 @@ p {
 }
 
 .cancel {
-  
   line-height: 1.25rem;
   font-weight: var(--fw-900);
 }
