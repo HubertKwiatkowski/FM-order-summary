@@ -1,5 +1,49 @@
 :root {
+  --clr-primary-100: hsl(225, 100%, 94%);
+  --clr-primary-200: hsl(245, 75%, 52%);
+  --clr-primary-300: hsl(255, 100%, 100%);
+  --clr-primary-400: hsla(228, 100%, 99%, 1);
 
+
+  --clr-neutral-100: hsl(225, 100%, 98%);
+  --clr-neutral-200: hsl(224, 23%, 55%);
+  --clr-neutral-300: hsl(223, 47%, 23%);
+
+  --ff-primary: 'Red Hat Display', sans-serif;
+
+  --ff-body: var(--ff-primary);
+
+  --fw-500: 500;
+  --fw-700: 700;
+  --fw-900: 900;
+
+  --fs-300: .8125rem;
+  --fs-310: .875rem;
+  --fs-320: .935rem;
+  --fs-400: 1rem;
+  --fs-500: 1.375rem;
+  --fs-600: 1.75rem;
+
+  --fs-body: var(--fs-320);
+  --fs-header: var(--fs-500);
+
+  --size-000: ;
+  --size-100: ;
+  --size-200: ;
+  --size-300: 1rem;
+  --size-400: 1.25rem;
+  --size-500: 1.5rem;
+  --size-600: 1.625rem;
+  --size-700: 1.8515rem;
+  --size-800: ;
+  --size-900: 2.3125rem;
+}
+
+@media (min-width: 50rem) {
+  :root {
+    --fs-body: var(--fs-400);
+    --fs-header: var(--fs-600);
+  }
 }
 
 
@@ -74,6 +118,177 @@ svg {
 /*  general styling */
 
 body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--clr-primary-100);
+  background-image: url('images/pattern-background-desktop.svg');
+  background-repeat: no-repeat;
+  background-position-x: center;
+  font-size: var(--fs-body);
+  font-family: var(--ff-body);
+  font-weight: var(--fw-500);
+  color: var(--clr-neutral-200);
+}
+
+@media (min-width:90rem) {
+  body {
+    background-repeat: repeat-x;
+  }
+}
+
+main {
+  width: 20.4375rem;
+  background-color: var(--clr-primary-300);
+  border-radius: var(--size-400);
+  box-shadow: 0 2.5rem 2.5rem -1.25rem rgba(13, 48, 189, 0.151826);
+  margin-inline: var(--size-500);
+}
+
+@media (min-width: 50rem) {
+  main {
+    width: 28.125rem;
+  }
+}
+
+.hero {
+  width: 100%;
+  height: 10rem;
+  background-image: url('images/illustration-hero.svg');
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+  border-top-left-radius: var(--size-400);
+  border-top-right-radius: var(--size-400);
+}
+
+@media (min-width: 50rem) {
+  .hero {
+    height: 13.75rem;
+    background-size: 100% 13.75rem;
+  }
+}
+
+.wrapper {
+  margin: 2rem;
+  text-align: center;
+}
+
+@media (min-width: 50rem) {
+  .wrapper {
+    margin: 2.8125rem 3rem 3rem;
+  }
+}
+
+h1 {
+  font-size: var(--fs-header);
+  font-weight: var(--fw-900);
+  line-height: var(--size-700);
+  color: var(--clr-neutral-300);
+  margin-bottom: 1.0625rem;
+}
+
+@media (min-width: 50rem) {
+  h1 {
+    line-height: var(--size-900);
+  }
+}
+
+p {
+  line-height: var(--size-600);
+  margin-bottom: var(--size-400);
+}
+
+@media (min-width: 50rem) {
+  p {
+    margin-inline: 20px;
+  }
+}
+
+.payment {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 5.125rem;
+  background-color: var(--clr-primary-400);
+  border-radius: 0.6875px;
+  margin-block: 1.5rem;
+}
+
+@media (min-width: 50rem) {
+  .payment {
+    height: 6.125rem;
+    margin-block: 1.25rem 2rem;
+  }
+}
+
+.tune {
+  height: 3rem;
+  width: 3rem;
+  background-image: url('images/icon-music.svg');
+  background-size: 3rem 3rem;
+  background-repeat: no-repeat;
+  margin-block: auto;
+}
+
+.plan {
+  font-size: var(--fs-320);
+  line-height: 1.1875rem;
+  margin-inline: 1.25rem 3.125rem;
+  margin-block: auto;
+}
+
+@media (min-width: 50rem) {
+  .plan {
+    margin-inline-end: 5.875rem;
+  }
+}
+
+.plan-name {
+  font-weight: var(--fw-900);
+  color: var(--clr-neutral-300);
+  margin-bottom: .25rem
+}
+
+.change {
+  font-size: var(--fs-300);
+  font-weight: var(--fw-700);
+  color: var(--clr-primary-200);
+  margin-block: auto;
+}
+
+.change a:visited {
+  color: var(--clr-primary-200);
+}
+
+.btn-payment {
+  height: 3.125rem;
+  border-radius: .6875rem;
+  background-color: var(--clr-primary-200);
+  line-height: 3.125rem;
+  font-weight: var(--fw-900);
+  color: var(--clr-primary-400);
+  box-shadow: 0 1.25rem 1.25rem rgba(56, 42, 225, 0.190291);
+  margin-bottom: 1.5rem;
+}
+
+@media (min-width: 50rem) {
+  .btn-payment {
+    margin-bottom: 2rem;
+  }
+}
+
+.cancel {
+  color: var(--clr-neutral-200);
+  line-height: 1.25rem;
+  font-weight: var(--fw-900);
+}
+
+.cancel a {
+  text-decoration: none;
 
 }
 
+.cancel a:visited {
+  color: var(--clr-neutral-200);
+}
