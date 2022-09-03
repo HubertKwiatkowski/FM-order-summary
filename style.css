@@ -246,11 +246,13 @@ p {
 .plan-name {
   font-weight: var(--fw-900);
   color: var(--clr-neutral-300);
+  line-height: 1.1875rem;
   margin-bottom: .25rem
 }
 
 @media (min-width: 50rem) {
   .plan-name {
+    line-height: 1.3125rem;
     margin-bottom: .375rem;
   }
 }
